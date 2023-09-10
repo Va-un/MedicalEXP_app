@@ -67,8 +67,7 @@ Region = st.selectbox("",['southwest', 'southeast', 'northwest', 'northeast'])
 Predict = st.button("Predict")
 
 bmi = NUM.transform([[BMI]]).tolist()
-bmi = bmi.reshape(1, )
-Value = [Gen[Gender], smoker[Smoker], region[Region], Age, bmi, Child ]
+Value = [Gen[Gender], smoker[Smoker], region[Region], Age, bmi[0], Child ]
 
 if (Predict):
     with st.spinner('Estimating The Cost'):
