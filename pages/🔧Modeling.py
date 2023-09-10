@@ -73,11 +73,7 @@ Value = [Gen[Gender], smoker[Smoker], region[Region], Age, bmi, Child   ]
 if (Predict):
     with st.spinner('Estimating The Cost'):
         time.sleep(0)
-<<<<<<< HEAD
     Cost = f'The Estimated money required is  ${predection(Value)}'
     st.subheader(Cost)
-=======
-    dollar = predection(Value)
-    Cost = 'The Estimated money required is  $'
-    st.subheader(dollar[0])
->>>>>>> 3f8d9c68d524a91a87f27113ab500654d5f633e6
+
+
