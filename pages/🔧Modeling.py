@@ -75,6 +75,6 @@ if (Predict):
     with st.spinner('Estimating The Cost'):
         time.sleep(0)
     #Cost = f'The Estimated money required is  ${predection(Value)}'
-    st.subheader(bmi)
+    st.subheader(float(bmi[0]))
 
 
