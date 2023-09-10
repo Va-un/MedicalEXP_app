@@ -2,6 +2,8 @@ import pickle
 import streamlit as st
 import pandas as pd
 import time
+import numpy
+
 st.set_page_config(
     page_title="Modeling",
     page_icon="🔧",
@@ -67,7 +69,7 @@ Region = st.selectbox("",['southwest', 'southeast', 'northwest', 'northeast'])
 Predict = st.button("Predict")
 
 bmi = NUM.transform([[BMI]]).tolist()
-bmi = bmi.item()
+bmi = bmi.squeeze()
 Value = [Gen[Gender], smoker[Smoker], region[Region], Age, bmi, Child ]
 
 if (Predict):
