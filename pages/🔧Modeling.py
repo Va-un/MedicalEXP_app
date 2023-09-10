@@ -73,7 +73,7 @@ Value = [Gen[Gender], smoker[Smoker], region[Region], Age, float(bmi[0]), Child 
 
 if (Predict):
     with st.spinner('Estimating The Cost'):
-        time.sleep(0)
+        time.sleep(3)
     Cost = f'The Estimated money required is  ${predection(Value)}'
     st.subheader(Cost)
 
