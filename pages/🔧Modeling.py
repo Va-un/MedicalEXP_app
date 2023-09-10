@@ -68,7 +68,7 @@ Predict = st.button("Predict")
 
 bmi = NUM.transform([[BMI]]).tolist()
 
-Value = [Gen[Gender], smoker[Smoker], region[Region], Age, bmi.tolist(), Child ]
+Value = [Gen[Gender], smoker[Smoker], region[Region], Age, bmi, Child ]
 
 if (Predict):
     with st.spinner('Estimating The Cost'):
