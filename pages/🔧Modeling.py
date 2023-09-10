@@ -67,7 +67,7 @@ Region = st.selectbox("",['southwest', 'southeast', 'northwest', 'northeast'])
 Predict = st.button("Predict")
 
 bmi = NUM.transform([[BMI]]).tolist()
-bmi = int(bmi[0])
+bmi = bmi[0]
 Value = [Gen[Gender], smoker[Smoker], region[Region], Age, bmi, Child ]
 
 if (Predict):
