@@ -64,7 +64,7 @@ st.subheader("From which region are you?")
 Region = st.selectbox("",['southwest', 'southeast', 'northwest', 'northeast'])
 
 
-Predict = st.button("Predict"))
+Predict = st.button("Predict")
 
 bmi = NUM.transform([[BMI]]).reshape(1, 1)
 
