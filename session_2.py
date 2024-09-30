@@ -264,10 +264,10 @@ from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 Num['bmi'] = scaler.fit_transform(Num[['bmi']])
 
-import pickle
-filename = 'Numeric_model.sav'
-pickle.dump(scaler, open(filename, 'wb'))
+from joblib import dump
 
+filename = 'Model/Numeric_model.joblib'
+dump(scaler, filename)
 
 
 """## Combining The Data"""
@@ -389,14 +389,17 @@ plt.title("Visualiing Tree")
 
 """## Saving model"""
 
-import pickle
-filename = 'finalized_model.sav'
-pickle.dump(model, open(filename, 'wb'))
+from joblib import dump
+
+filename = 'Model/finalized_model.joblib'
+dump(model, filename)
 
 # some time later...
 
 # load the model from disk
-loaded_model = pickle.load(open(filename, 'rb'))
+from joblib import load
+
+loaded_model = load('Model/finalized_model.joblib')
 result = loaded_model.predict(x_test)
 rmse = mean_squared_error(y_test, result)
 print('RMSE:',rmse)
